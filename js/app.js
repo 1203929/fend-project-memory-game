@@ -1,6 +1,10 @@
 /*
  * Create a list that holds all of your cards
  */
+ let cardList = ['fa-diamond','fa-paper-plane-o','fa-anchor','fa-bolt','fa-cube','fa-anchor','fa-leaf','fa-bicycle',
+                'fa-diamond','fa-bomb','fa-leaf','fa-bomb','fa-bolt','fa-bicycle',
+                'fa-paper-plane-o','fa-cube']
+
 
 
 /*
@@ -36,3 +40,6 @@ function shuffle(array) {
  *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
+ let hunk =function displayCards(){
+
+ }
