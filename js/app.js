@@ -14,6 +14,7 @@ let restartButton = document.querySelector('.restart');
 let moves = 0;
 let counter = document.querySelector('.moves');
 let interval;
+let openCards = [];
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
@@ -64,7 +65,43 @@ function launchGame(){
   let  timer = document.querySelector('.timer');
   timer.innerHTML = '0 mins 0 secs';
   clearInterval(interval);
-}
+};
+
+//applying method to open and show cards
+let showCards = function () {
+  this.classList.toggle('open');
+  this.clsssList.toggle('show');
+  this.classList.toggle('disabled');
+};
+
+//adding visible symbol's card into an array named openCards and checking weather two cards match or
+ function visibleCard(){
+   openCards.push(this);
+   let len = openCards.length;
+
+   if(len == 1 || Moves == 0) {
+     second = 0;
+     minute = 0;
+     hour = 0;
+     startTimer();
+   }
+   if(len = 1 && moves == 0) {
+     second = 0;
+     minute = 0;
+     hour = 0;
+     startTimer();
+   } else if(len === 2) {
+     moveCounter();
+     if (openCards[0].type ===openCards[1].type) {
+       matchCon();
+// matchCon function run when two cards matched
+}else {
+  notMatching();// if two cards does't match
+     }
+   }
+ }
+
+
 
 
 
