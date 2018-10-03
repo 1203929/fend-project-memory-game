@@ -4,9 +4,16 @@
  let cardList = ['fa-diamond','fa-paper-plane-o','fa-anchor','fa-bolt','fa-cube','fa-anchor','fa-leaf','fa-bicycle',
                 'fa-diamond','fa-bomb','fa-leaf','fa-bomb','fa-bolt','fa-bicycle',
                 'fa-paper-plane-o','fa-cube']
-
-
-
+let patti = [...card];
+console.log(patti);
+let card = document.getElementsByClassName('card');
+let deck = document.getElementsByClassName('deck')[0];
+let timer = document.querySelector('.Moves');
+let twinkle = document.querySelectorAll('.fa-star');
+let restartButton = document.querySelector('.restart');
+let moves = 0;
+let counter = document.querySelector('.moves');
+let interval;
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
@@ -30,6 +37,40 @@ function shuffle(array) {
 }
 
 
+//shuffling card upon page load or page refresh
+document.body.onload = launchGame();
+//adding eventListener to launchGame function, by clicking restart button
+restartButton.addEventListener('click',launchGame);
+function launchGame(){
+  patti = shuffle(patti);
+  for (let i = 0; i<patt.length; i++){
+    patti.forEach(i => deck.appendChild(i));
+    patti[i].classList.remove('show','open','Matching','disabled');
+  }
+  showCards = [];
+  //resseting number of Moves
+  moves = 0;
+  counter.innerHTML = moves;
+  //resetting rating
+  for (let i =0; i<twinkle.length; i++){
+    twinkle[i].style.color = '#00a1ff';
+
+    twinkle[i].style.display = 'inline'
+  }
+  //to ressets timer
+  let second = 0;
+  let minute = 0;
+  let hour = 0;
+  let  timer = document.querySelector('.timer');
+  timer.innerHTML = '0 mins 0 secs';
+  clearInterval(interval);
+}
+
+
+
+
+
+
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
@@ -43,3 +84,4 @@ function shuffle(array) {
  let hunk =function displayCards(){
 
  }
+ cards.addEventListener('click', hunk);
