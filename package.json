@@ -1,0 +1,29 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "* [Instructions](#instructions)\r * [Contributing](#contributing)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1203929/fend-project-memory-game.git"
+  },
+  "author": "Masnoon Junaid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1203929/fend-project-memory-game/issues"
+  },
+  "homepage": "https://github.com/1203929/fend-project-memory-game#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0"
+  },
+  "dependencies": {
+    "gulp-jasmine-browser": "^4.0.0",
+    "gulp-sass": "^4.0.1",
+    "jasmine-core": "^3.2.1",
+    "puppeteer": "^1.8.0"
+  }
+}
