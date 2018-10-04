@@ -110,7 +110,18 @@ function matchCon() {
   openCards = [];
 };
 
-// 
+// when cards don't match
+function notMatching(){
+  openCards[0].classList.add('not_matching');
+  openCards[1].classList.add('not_matching');
+  disable();
+  setTimeout(function(){
+    openCards[0].clssList.remove('show', 'open', 'not_matching');
+    openCards[1]classList.remove('show', 'open','not_matching');
+    enable();
+    openCards = [];
+  },550);
+}
 
 
 
