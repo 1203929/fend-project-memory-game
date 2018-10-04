@@ -101,8 +101,16 @@ let showCards = function () {
    }
  }
 
+//functionality when cards match
+function matchCon() {
+  openCards[0].classList.add('Matching', 'disabled');
+  openCards[1].classList.add('Matching', 'disabled');
+  openCards[0].classList.remove('show', 'open');
+  openCards[1].classList.remove('show','open');
+  openCards = [];
+};
 
-
+// 
 
 
 
