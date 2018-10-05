@@ -8,7 +8,7 @@ let patti = [...card];
 console.log(patti);
 let card = document.getElementsByClassName('card');
 let deck = document.getElementsByClassName('deck')[0];
-let timer = document.querySelector('.Moves');
+let timer = document.querySelector('.timer');
 let twinkle = document.querySelectorAll('.fa-star');
 let restartButton = document.querySelector('.restart');
 let moves = 0;
@@ -141,6 +141,21 @@ function enable(){
   });
 }
 
+//setting game timer function
+function setTimer() {
+  interval = setInterval(function () {
+    timer.innerHTML = minute + 'mins' + second + 'secs';
+    second++;
+    if (second == 60) {
+      minute++;
+      second = 0;
+    }
+    if (minute == 60) {
+      hour++;
+      minute = 0;
+    }
+  }, 1000);
+}
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)

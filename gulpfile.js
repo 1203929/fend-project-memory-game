@@ -68,9 +68,17 @@ gulp.task('default', ['copy-html', 'copy-images','styles','lint']);
     browserSync.init({
       server: './dist'
     });
-});    
+});
 
 
+gulp.task('script', function() {
+  gulp.src('js/**/*.js')
+      .pipe(gulp.dest('dist/js'));
+});
+gulp.task('script-dist', function() {
+  gulp.src('js/**/*.js')
+      .pipe(gulp.dest('dist/js'));
+});
 // gulp.task('tests', function() {
 //     gulp
 //         .src('tests/spec/extraSpec.js')
