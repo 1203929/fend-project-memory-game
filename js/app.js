@@ -156,6 +156,34 @@ function setTimer() {
     }
   }, 1000);
 }
+
+// *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
+//setting star rating based on number of moves to flipped the cardd
+
+function moveCounter() {
+  moves++;
+  counter.innerHTML = moves;
+  if (moves >8 && moves < 14) {
+    for (i =0; i < 3; i++) {
+      if (i > 1) {
+        twinkle[i].style.display = 'none';
+      }
+    }
+  }
+  else if (moves > 15) {
+    for (i = 0; i < 3; i++) {
+      if (i >0) {
+        stars[i].style.display = 'none';
+      }
+    }
+  }
+}
+
+// *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
+
+
+
+ //
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
