@@ -17,6 +17,7 @@ let interval;
 let openCards = [];
 let matchingCard = document.getElementsByClassName('matching');
 let modal = document.getElementsByClassName('modal')[0];
+let closeIcon = document.getElementsByClassName('matching');
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
@@ -181,10 +182,43 @@ function moveCounter() {
 }
 
 // *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
+//Adding a congratulations modal after all cards matched successfully
+ function congratulations() {
+   if(matchingCard.length == 16) {
+      clearInterval(interval);
+      let finalTime = timer.innerHTML;
+      modal.classList.add('show');
+      let starRating = document.querySelector('.stars').innerHTML;
+      //Going to apear on the modal
+      document.getElementsByClassName('final-Moves')[0].innerHTML = moves;
+      document.getElementsByClassName('star-rating')[0].innerHTML = starRating;
+      document.getElementsByClassName('total-time')[0].innerHTML = finalTime;
+      //adding a close button to exit the ;
+      exitModal()
+   }
+ }
 
 
+ function exitModal() {
+   closeIcon.addEventListener('click', function(e) {
+     modal.classList.remove('show');
+     playGame();
+   });
+ }
 
- //
+ //resetting Game
+ function reset() {
+   modal.classList.remove('show');
+   playGame();
+ }
+//Adding event Listener to each cards (click)
+for (let i = 0; i < cards.length; i++) {
+  card = cards[i];
+  card.addEventListener('click',showCards);
+  card.addEventListener('click', visibleCard);
+  card.addEventListener('click',congratulations);
+}
+
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
@@ -195,7 +229,3 @@ function moveCounter() {
  *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
- let hunk =function displayCards(){
-
- }
- cards.addEventListener('click', hunk);
