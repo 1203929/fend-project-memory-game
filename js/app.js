@@ -16,6 +16,7 @@ let counter = document.querySelector('.moves');
 let interval;
 let openCards = [];
 let matchingCard = document.getElementsByClassName('matching');
+let modal = document.getElementsByClassName('modal')[0];
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
