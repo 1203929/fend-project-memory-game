@@ -18,6 +18,9 @@ let openCards = [];
 let matchingCard = document.getElementsByClassName('matching');
 let modal = document.getElementsByClassName('modal')[0];
 let closeIcon = document.getElementsByClassName('matching');
+let starsList = document.querySelectorAll('.stars li');
+const restart = document.querySelector('restart');
+const playAgain = document.querySelector('.reply');
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
@@ -175,7 +178,7 @@ function moveCounter() {
   else if (moves > 15) {
     for (i = 0; i < 3; i++) {
       if (i >0) {
-        stars[i].style.display = 'none';
+        twinkle[i].style.display = 'none';
       }
     }
   }
