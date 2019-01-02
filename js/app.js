@@ -4,24 +4,7 @@
  let cardList = ['fa-diamond','fa-paper-plane-o','fa-anchor','fa-bolt','fa-cube','fa-anchor','fa-leaf','fa-bicycle',
                 'fa-diamond','fa-bomb','fa-leaf','fa-bomb','fa-bolt','fa-bicycle',
                 'fa-paper-plane-o','fa-cube']
-let patti = [...card];
-console.log(patti);
-let card = document.getElementsByClassName('card');
-let deck = document.getElementsByClassName('deck')[0];
-let timer = document.querySelector('.timer');
-let twinkle = document.querySelectorAll('.fa-star');
-let restartButton = document.querySelector('.restart');
-let moves = 0;
-let counter = document.querySelector('.moves');
-let interval;
-let openCards = [];
-let matchingCard = document.getElementsByClassName('matching');
-let modal = document.getElementsByClassName('modal')[0];
-let closeIcon = document.getElementsByClassName('matching');
-let starsList = document.querySelectorAll('.stars li');
-const restart = document.querySelector('restart');
-const playAgain = document.querySelector('.reply');
-/*
+
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
  *   - loop through each card and create its HTML
