@@ -22,7 +22,6 @@ body {
 }
 
 .container {
-    background-color: darkolivegreen;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +54,7 @@ h1 {
 .deck .card {
     height: 125px;
     width: 125px;
-    background: #663399;
+    background: #2e3d49;
     font-size: 0;
     color: #ffffff;
     border-radius: 8px;
