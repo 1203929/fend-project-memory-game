@@ -44,6 +44,7 @@ function compare(currentCard,previousCard){
 
     matchedCard.push(currentCard,previousCard);
     openedCard = [];
+    isOver();
   }else {
     setTimeout(function(){
       currentCard.classList.remove('open','show','disable');
@@ -53,7 +54,12 @@ function compare(currentCard,previousCard){
   }
 }
 
-
+//game over alert after all card match successfully
+function isOver(){
+  if(matchedCard.length === icons.length){
+  alert("GAME OVER!");
+  }
+}
 
 /*
  * Display the cards on the page
