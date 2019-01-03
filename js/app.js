@@ -28,6 +28,7 @@ function click(card){
       card.classList.add('open','show','disable');
       openedCard.push(this);
       compare(currentCard,previousCard);
+      moveCounter();
     }else {
       currentCard.classList.add('open','show','disable');
       openedCard.push(this);
@@ -61,6 +62,13 @@ function isOver(){
   }
 }
 
+//setting counter function to count number of Moves
+const moveElement = document.querySelector('.moves');
+let moves = 0;
+function moveCounter(){
+  moves++;
+  moveElement.innerHTML = moves;
+}
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
