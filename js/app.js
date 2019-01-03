@@ -17,7 +17,7 @@ for (let i = 0;i<cardList.length; i++){
   cardContainer.appendChild(card);
 }
 
-
+//adding addEventListener "click" to display hidden icons
 function click(card){
   card.addEventListener('click',function(){
     const currentCard = this;
@@ -25,13 +25,31 @@ function click(card){
     if(openedCard.length === 1){
       card.classList.add('open','show','disable');
       openedCard.push(this);
+      
     }else {
       currentCard.classList.add('open','show','disable');
       openedCard.push(this);
     }
   });
 }
+//compare function to check wheather card matched or not on the bassis
+//of innerHTML property
 
+function compare(){
+  if(currentCard.innerHTML === previousCard.innerHTML){
+    currentCard.classList.add('match');
+    previousCard.classList.add('match');
+
+    matchedCard.push(currentCard,previousCard);
+    openedCard = [];
+  }else {
+    setTimeout(function(){
+      currentCard.classList.remove('open','show','disable');
+      previousCard.classList.remove('open','show','disable');
+      openedCard = [];
+    },500);
+  }
+}
 
 
 
