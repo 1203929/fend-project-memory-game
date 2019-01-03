@@ -1,20 +1,22 @@
 /*
  * Create a list that holds all of your cards
  */
- const cardList = ['fa-diamond','fa-paper-plane-o','fa-anchor','fa-bolt',
-                   'fa-cube','fa-anchor','fa-leaf','fa-bicycle',
-                'fa-diamond','fa-bomb','fa-leaf','fa-bomb','fa-bolt',
-                'fa-bicycle','fa-paper-plane-o','fa-cube'];
+ const icons =  ["fa fa-diamond","fa fa-paper-plane-o",
+          "fa fa-anchor","fa fa-bolt","fa fa-cube","fa fa-anchor",
+          "fa fa-leaf","fa fa-bicycle","fa fa-diamond","fa fa-bomb","fa fa-leaf",
+          "fa fa-bomb","fa fa-bolt","fa fa-bicycle",
+          "fa fa-paper-plane-o","fa fa-cube"];
 
 const cardContainer  = document.querySelector('.deck');
 let openedCard = [];
 let matchedCard = [];
 
-for (let i = 0;i<cardList.length; i++){
+for (let i = 0;i<icons.length; i++){
   const card = document.createElement('li');
   card.classList.add("card");
-  card.innerHTML = `<i class="${cardList[i]}"></i>`;
+  card.innerHTML = `<i class="${icons[i]}"></i>`;
   cardContainer.appendChild(card);
+  click(card);
 }
 
 //adding addEventListener "click" to display hidden icons
@@ -25,7 +27,7 @@ function click(card){
     if(openedCard.length === 1){
       card.classList.add('open','show','disable');
       openedCard.push(this);
-      
+      compare(currentCard,previousCard);
     }else {
       currentCard.classList.add('open','show','disable');
       openedCard.push(this);
@@ -35,7 +37,7 @@ function click(card){
 //compare function to check wheather card matched or not on the bassis
 //of innerHTML property
 
-function compare(){
+function compare(currentCard,previousCard){
   if(currentCard.innerHTML === previousCard.innerHTML){
     currentCard.classList.add('match');
     previousCard.classList.add('match');
@@ -124,17 +126,7 @@ function setTimer() {
  }
 
  //resetting Game
- function reset() {
-   modal.classList.remove('show');
-   playGame();
- }
-//Adding event Listener to each cards (click)
-for (let i = 0; i < cards.length; i++) {
-  card = cards[i];
-  card.addEventListener('click',showCards);
-  card.addEventListener('click', visibleCard);
-  card.addEventListener('click',congratulations);
-}
+
 
 /*
  * set up the event listener for a card. If a card is clicked:
