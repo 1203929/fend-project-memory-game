@@ -62,6 +62,7 @@ function isOver(){
   }
 }
 
+<<<<<<< HEAD
 //setting counter function to count number of Moves
 const moveElement = document.querySelector('.moves');
 let moves = 0;
@@ -69,6 +70,8 @@ function moveCounter(){
   moves++;
   moveElement.innerHTML = moves;
 }
+=======
+>>>>>>> 69f4cc1325e11c55e96ddbec6aaa769b32267d96
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
