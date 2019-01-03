@@ -7,6 +7,8 @@
                 'fa-bicycle','fa-paper-plane-o','fa-cube'];
 
 const cardContainer  = document.querySelector('.deck');
+let openedCard = [];
+let matchedCard = [];
 
 for (let i = 0;i<cardList.length; i++){
   const card = document.createElement('li');
@@ -16,7 +18,19 @@ for (let i = 0;i<cardList.length; i++){
 }
 
 
-
+function click(card){
+  card.addEventListener('click',function(){
+    const currentCard = this;
+    const previousCard = openedCard[0];
+    if(openedCard.length === 1){
+      card.classList.add('open','show','disable');
+      openedCard.push(this);
+    }else {
+      currentCard.classList.add('open','show','disable');
+      openedCard.push(this);
+    }
+  });
+}
 
 
 

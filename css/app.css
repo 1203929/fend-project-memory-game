@@ -79,7 +79,9 @@ h1 {
     cursor: pointer;
     font-size:0;
 }
-
+.disable{
+  pointer-events: none;
+}
 /*
  * Styles for the Score Panel
  */
