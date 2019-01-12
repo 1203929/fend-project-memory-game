@@ -62,7 +62,7 @@ function isOver(){
   }
 }
 
-<<<<<<< HEAD
+
 //setting counter function to count number of Moves
 const moveElement = document.querySelector('.moves');
 let moves = 0;
