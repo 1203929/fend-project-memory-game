@@ -15,6 +15,9 @@ body {
     margin: 0;
     padding: 0;
 }
+.follow{
+  font-size: 1.4em;
+}
 
 body {
     background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
