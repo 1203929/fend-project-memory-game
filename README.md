@@ -16,10 +16,10 @@ For specific, detailed instructions, look at the project instructions in the [Ud
 ## Concept required to complete this Project
 This project required a solid understanding of DOM, and it's manipulation methods, something like a core document object model and covers these few of key concept to work with JavaScript
 
-### The Document Object Model
-### Creating Content with JavaScript
-### Working with Browser Events
-### Performance
+### 1. The Document Object Model
+### 2. Creating Content with JavaScript
+### 3. Working with Browser Events
+### 4. Performance
 
 ## Skill I gain throughout this project
 
@@ -28,3 +28,5 @@ This project required a solid understanding of DOM, and it's manipulation method
 2.  Working with Browser Events, knew what happening under the hood when I interact with a website, How to listen browser events and how to respond when they occur.
 
 3. Performance, writing code that can drastically change website's both content and it's looks. Wrote such code which are function and efficient.
+
+Take a look at this which I hosted with github pages , since It's a complete browser based game no backed required . [Memory game](https://1203929.github.io/udacity-memorygame/) .
